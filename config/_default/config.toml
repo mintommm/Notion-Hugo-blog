@@ -1,4 +1,0 @@
-baseURL = "https://tryk.dev/blog/"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "trykdev"

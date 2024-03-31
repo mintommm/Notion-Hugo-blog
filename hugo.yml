@@ -1,0 +1,149 @@
+baseURL: https://tryk.dev/blog/
+title: tryk.dev/blog
+
+defaultContentLanguage: ja
+hasCJKLanguage: true
+timeZone: Asia/Tokyo
+
+theme: github.com/adityatelange/hugo-PaperMod
+
+module:
+  imports:
+  - path: github.com/adityatelange/hugo-PaperMod
+
+params:
+  # env: production # to enable google analytics, opengraph, twitter-cards and schema.
+
+  title: tryk.dev/blog
+  # description: "Welcome to my blog. This is Terry's pages."
+  keywords: [Blog, Portfolio, PaperMod]
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+
+  DateFormat: 2006-01-02
+  defaultTheme: auto # dark, light
+  
+  gtm_id: GTM-PB2GPP2J
+  # gtm_id: GTM-5MJ49XP
+  gtm_datalayer: basic
+  gtm_endpoint: tryk.dev/sgtm
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  assets:
+    disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: /icon/favicon.ico
+    favicon16x16: /icon/favicon-16x16.png
+    favicon32x32: /icon/favicon-32x32.png
+    apple_touch_icon: /icon/apple-touch-icon.png
+    # safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: tryk.dev
+    # icon: /icon/apple-touch-icon.png
+    iconHeight: 35
+
+  # home-info mode
+  homeInfoParams:
+    Title: tryk.dev/blog
+    Content: Welcome. This is TerryK's pages.
+
+  socialIcons:
+    - name: twitter
+      url: https://twitter.com/mintommm
+    - name: github
+      url: https://github.com/mintommm
+    - name: linkedin
+      url: https://www.linkedin.com/in/terrykurumatani/
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+
+enableGitInfo: true
+frontmatter:
+  lastmod:
+    - lastmod
+    - :git
+    - :fileModTime
+    - :default
+
+permalinks:
+  page:
+    /: /:slug
+    posts: /:slug
+
+# taxonomies:
+#   tag: tags
+
+# menu:
+#   main:
+#     - identifier: profile
+#       name: Profile
+#       url: /profile/
+#       weight: 10
+
+#     - identifier: archives
+#       name: Archives
+#       url: /archives/
+#       weight: 20
+
+#     - identifier: tags
+#       name: Tags
+#       url: /tags/
+#       weight: 30
+
+enableRobotsTXT: true
+
+# markup:
+  # goldmark:
+  #   renderer:
+  #     unsafe: true
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      cjk:
+        eastAsianLineBreaks: true
+        eastAsianLineBreaksStyle: css3draft
+        enable: true
+        escapedSpace: true
+    renderer:
+      unsafe: true
+  asciidocext:
+    preserveTOC: false
+  highlight:
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    # noClasses: false
+    style: solarized-dark
+
+imaging:
+  quality: 50
+  resampleFilter: MitchellNetravali
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# buildDrafts: false  # Moved to config/ dir
+buildFuture: false
+buildExpired: false
