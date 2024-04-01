@@ -2,7 +2,7 @@
   {{- range .Data.Pages }}
   {{- if ne .Kind "term" }}
   {{- if not (hasPrefix .RelPermalink "/debug") }}
-  {{- if ne .Params.noindex true }}
+  {{- if ne .Params.robotsNoIndex true }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- if not .Lastmod.IsZero }}
