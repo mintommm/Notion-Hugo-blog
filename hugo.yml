@@ -77,10 +77,15 @@ params:
 
 enableGitInfo: true
 frontmatter:
+  date:
+    - publishdate
+    - created_time
+    - :default
   lastmod:
     - lastmod
-    - :git
-    - :fileModTime
+    # - :git
+    # - :fileModTime
+    - last_edited_time
     - :default
 
 permalinks:
