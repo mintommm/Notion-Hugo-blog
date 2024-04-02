@@ -130,7 +130,7 @@ markup:
         enable: true
         escapedSpace: true
     renderer:
-      unsafe: true
+      unsafe: false
   asciidocext:
     preserveTOC: false
   highlight:
