@@ -93,8 +93,8 @@ permalinks:
     /: /:slug
     posts: /:slug
 
-# taxonomies:
-#   tag: tags
+taxonomies:
+  tag: tags
 
 # menu:
 #   main:
